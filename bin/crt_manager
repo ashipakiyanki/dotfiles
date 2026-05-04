@@ -1,0 +1,31 @@
+#!/bin/bash
+
+items=$(cat << 'EOF'
+Toggle filter
+640x480@60Hz
+640x480@120Hz
+1024x768@85Hz
+1200x900@72Hz
+1280x240@120Hz
+1440x1080@60Hz
+EOF
+)
+
+commands=$(cat << 'EOF'
+hyprshade toggle crt
+hyprctl keyword monitor HDMI-A-1,640x480@60,4480x960,1.0
+hyprctl keyword monitor HDMI-A-1,640x480@120,4480x960,1.0
+hyprctl keyword monitor HDMI-A-1,1024x768@85,4480x672,1.0
+hyprctl keyword monitor HDMI-A-1,1200x900@72,4480x540,1.0
+hyprctl keyword monitor HDMI-A-1,1280x240@120,4480x1200,1.0
+hyprctl keyword monitor HDMI-A-1,1440x1080@60,4480x360,1.0
+EOF
+)
+
+idx=$(echo "$items" | fuzzel -d --no-sort -w 16 -l 7 --index -C 0000C0ff)
+exit_code=$?
+((idx++))
+if [ "$exit_code" -eq 0 ]; then
+    selection=$(echo "$commands" | sed -n "$idx p")
+    sh -c "$selection"
+fi

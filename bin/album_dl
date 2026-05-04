@@ -1,0 +1,13 @@
+#!/bin/bash
+
+cd ~/Music/Albums/
+
+album=$(yt-dlp $1 -I 1:1 --skip-download --no-warning --print album)
+artist=$(yt-dlp $1 -I 1:1 --skip-download --no-warning --print artist)
+
+mkdir -p "$artist"
+cd "$artist"
+mkdir -p "$album"
+cd "$album"
+
+yt-dlp --embed-metadata --parse-metadata "playlist_index:%(track_number)s" -i --extract-audio --audio-format mp3 --audio-quality 0 -o "%(playlist_index)s %(title)s.%(ext)s" $1

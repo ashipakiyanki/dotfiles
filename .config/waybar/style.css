@@ -1,0 +1,99 @@
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: MapleMonoNormal;
+    font-size: 14px;
+}
+
+window#waybar {
+    background-color: transparent;
+    transition-property: background-color;
+    transition-duration: .5s;
+    border-radius: 10px 10px 10px 10px;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+window#waybar.termite {
+    background-color: #3F3F3F;
+}
+
+window#waybar.chromium {
+    background-color: #000000;
+    border: none;
+}
+
+button {
+    /* Avoid rounded borders under each button name */
+    border: none;
+    border-radius: 0;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+    background: inherit;
+}
+
+/* you can set a style on hover for any module like this */
+#pulseaudio:hover {
+    background-color: #a37800;
+}
+
+#workspaces {
+    border-radius: 10px;
+}
+
+#workspaces button {
+    background-color: transparent;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 0px 0px;
+    padding-left: 8px;
+    padding-right: 4px;
+}
+
+#workspaces button:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+#workspaces button.focused {
+    background: rgba(0, 255, 0, 1.0);
+    background-color: #ffffff;
+}
+
+#workspaces button.visible {
+    background-color: rgba(255, 0, 0, 0.3);
+}
+
+.modules-right,
+.modules-left {
+    border-radius: 10px;
+    background: linear-gradient(0deg,rgba(128, 128, 128, 0.5) 0%, rgba(128, 128, 128, 0.25) 50%, rgba(128, 128, 128, 0.5) 100%);
+}
+
+#tray,
+#wireplumber {
+    border-right: 2px solid white;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#power-profiles-daemon,
+#mpd {
+    padding: 0 10px;
+    color: #ffffff;
+}

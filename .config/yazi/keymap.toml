@@ -1,0 +1,10 @@
+[mgr]
+ 
+  prepend_keymap = [
+    { on = "T", run = ["shell --orphan --confirm konsole"], desc = "Open terminal"},
+    { on = ["d", "d"], run = "remove", desc = "Trash file" },
+    { on = ["d", "D"], run = "remove --permanently", desc = "Permanently delete file" },
+    { on = ["d", "u"], run = "plugin restore", desc = "Restore last deleted files/folders" },
+    { on = ["d", "U"], run = "plugin restore -- --interactive --interactive-overwrite", desc = "Restore deleted files/folders (Interactive overwrite)" },
+    { on = ["F"], run = "plugin yafg", desc = "Fuzzy find" },
+   ]

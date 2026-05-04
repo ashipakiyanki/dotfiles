@@ -1,0 +1,93 @@
+{
+	"$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+	"modules": [
+		"separator",
+		{
+			"type": "wm",
+			"key": "Window Manager",
+			"format": "{pretty-name} ({version})"
+		},
+		{
+			"type": "os",
+			"key": "Operating System",
+			"format": "{pretty-name}"
+		},
+		{
+			"type": "initsystem",
+			"format": "{name}"
+		},
+		"kernel",
+
+		"separator",
+		{
+			"type": "board",
+			"key": "Motherboard"
+		},
+		{
+			"type": "memory",
+			"format": "{used} / {total}"
+		},
+		"cpuusage",
+		{
+			"type": "cpu",
+			"format": "{name}"
+		},
+		{
+			"type": "gpu",
+			"format": "{name}"
+		},
+		{
+			"type": "physicaldisk",
+			"key": "Disk ({name})",
+			"format": "{size} {physical-type}"
+		},
+		{
+			"type": "disk",
+			"key": "Disk Usage",
+			"folders": ["/"],
+			"format": "{size-used} / {size-total}"
+		},
+
+		"separator",
+		{
+			"type": "monitor",
+			"key": "Monitor ({name})",
+			"format": "{width}x{height}@{refresh-rate}Hz"
+		},
+		{
+			"type": "keyboard",
+			"ignores": ["SteelSeries"]
+		},
+		{
+			"type": "mouse",
+			"ignores": ["Cherry"]
+		},
+		"bluetooth",
+
+		"separator",
+		{
+			"type": "uptime",
+			"key": "Boot Time",
+			"format": "{boot-time}"
+		},
+		{
+			"type": "localip",
+			"key": "IP Address"
+		},
+		{
+			"type": "publicip",
+			"key": "Public IP Address",
+			"format": "{ip}"
+		},
+        
+		"separator",
+		{
+			"type": "media",
+			"format": "{artist} - {title} ({status})"
+		},
+		{
+			"type": "player",
+			"format": "{player}"
+		}
+	]
+}
