@@ -72,6 +72,9 @@ button:hover {
     background: linear-gradient(0deg,rgba(128, 128, 128, 0.5) 0%, rgba(128, 128, 128, 0.25) 50%, rgba(128, 128, 128, 0.5) 100%);
 }
 
+{{#if LAPTOP}}
+#clock,
+{{/if}}
 #tray,
 #wireplumber {
     border-right: 2px solid white;

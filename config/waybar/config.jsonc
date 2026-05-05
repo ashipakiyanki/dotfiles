@@ -8,16 +8,11 @@
 		"modules-right": [
 			"tray",
 			"wireplumber",
-			"clock"
+			"clock",
+            {{#if LAPTOP}}
+            "battery"
+            {{/if}}
 		],
-		"tray": {
-			"icon-size": 18,
-			"spacing": 10,
-			"icons": {
-				"blueman": "bluetooth",
-				"TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
-			}
-		},
 		"hyprland/workspaces": {
 			"format": "{name} {windows}",
 			"workspace-taskbar": {
@@ -30,6 +25,14 @@
 				"*": {{WORKSPACES_PER_MONITOR}}
             }
 		},
+		"tray": {
+			"icon-size": 18,
+			"spacing": 10,
+			"icons": {
+				"blueman": "bluetooth",
+				"TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
+			}
+		},
 		"wireplumber": {
 			"format": "{icon} {volume}%",
 			"format-icons": ["🔈"],
@@ -41,6 +44,17 @@
 			"timezone": "America/Indiana/Indianapolis",
 			"format": "{:%B %d, %Y - %I:%M:%S %p}",
 			"interval": 1
-		}
+		},
+        "battery": {
+            "bat": "BAT0",
+            "interval": 15,
+            "states": {
+                "warning": 30,
+                "critical": 15
+            },
+            "format": "{capacity}% {icon}",
+            "format-icons": ["", "", "", "", ""],
+            "max-length": 25
+        }
 	}
 ]
