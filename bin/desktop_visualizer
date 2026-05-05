@@ -1,0 +1,5 @@
+#!/bin/bash
+
+sleep 0.1; kitten panel --edge=background --output-name DP-1 -o background_opacity=0.6 cava
+sleep 0.1; kitten panel --edge=background --output-name DP-2 -o background_opacity=0.6 cava
+sleep 0.1; kitten panel --edge=background --output-name HDMI-A-1 -o background_opacity=0.6 cava
