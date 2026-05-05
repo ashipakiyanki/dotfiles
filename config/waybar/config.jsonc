@@ -36,7 +36,7 @@
 		"wireplumber": {
 			"format": "{icon} {volume}%",
 			"format-icons": ["🔈"],
-			"on-click": "if not pgrep -x pavucontrol; then pavucontrol -t 1; fi",
+			"on-click": "pavucontrol -t 1",
 			"max-volume": 150,
 			"scroll-step": 1
 		},
