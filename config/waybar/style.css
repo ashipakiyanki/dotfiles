@@ -35,11 +35,6 @@ button:hover {
     background: inherit;
 }
 
-/* you can set a style on hover for any module like this */
-#pulseaudio:hover {
-    background-color: #a37800;
-}
-
 #workspaces {
     border-radius: 10px;
 }
@@ -71,6 +66,10 @@ button:hover {
 }
 
 #battery.critical {
+    color: rgba(255, 64, 64, 1);
+}
+
+#wireplumber.muted {
     color: rgba(255, 64, 64, 1);
 }
 
