@@ -8,10 +8,11 @@
 		"modules-right": [
 			"tray",
 			"wireplumber",
-			"clock",
             {{#if LAPTOP}}
-            "battery"
+            "backlight",
+            "battery",
             {{/if}}
+			"clock"
 		],
 		"hyprland/workspaces": {
 			"format": "{name} {windows}",
@@ -40,11 +41,11 @@
 			"max-volume": 150,
 			"scroll-step": 1
 		},
-		"clock": {
-			"timezone": "America/Indiana/Indianapolis",
-			"format": "{:%B %d, %Y - %I:%M:%S %p}",
-			"interval": 1
-		},
+        "backlight": {
+            "device": "intelbacklight",
+            "format": "{icon} {percent}%",
+            "format-icons": ["", ""]
+        },
         "battery": {
             "bat": "BAT0",
             "interval": 1,
@@ -52,12 +53,17 @@
                 "warning": 50,
                 "critical": 25
             },
-            "format": "{capacity}% {icon}",
+            "format": "{icon} {capacity}%",
             "format-icons": {
                 "default": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
                 "charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"]
             },
             "max-length": 25
-        }
+        },
+		"clock": {
+			"timezone": "America/Indiana/Indianapolis",
+			"format": "{:%B %d, %Y - %I:%M:%S %p}",
+			"interval": 1
+		}
 	}
 ]
