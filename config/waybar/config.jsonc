@@ -5,6 +5,9 @@
 		"modules-left": [
 			"hyprland/workspaces"
 		],
+        "modules-center": [
+            "mpris"
+        ],
 		"modules-right": [
 			"tray",
 			"wireplumber",
@@ -26,6 +29,10 @@
 				"*": {{WORKSPACES_PER_MONITOR}}
             }
 		},
+        "mpris": {
+            "format": "{player} ({status}) - {title} [{position}/{length}]",
+            "interval": 1
+        },
 		"tray": {
 			"icon-size": 18,
 			"spacing": 10,
