@@ -1,0 +1,8 @@
+clear_on_pause = true
+interval = 2000
+
+[template]
+state = "{{#if artist_display}}{{{artist_display}}} {{#if (contains url 'cdda://')}} (on CD){{/if}}{{else}}{{{player}}}{{/if}}"
+
+[player.default]
+status_display_type = "state"

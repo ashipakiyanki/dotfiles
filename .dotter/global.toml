@@ -7,6 +7,7 @@ depends = []
 Pictures = "~/Pictures"
 bin = "~/bin"
 config = "~/.config"
+config_untemplated = { target = "~/.config", type = "symbolic" }
 
 [default.variables]
 
