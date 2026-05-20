@@ -19,6 +19,7 @@
 		],
 		"hyprland/workspaces": {
 			"format": "{name} {windows}",
+            "on-click": "activate",
 			"workspace-taskbar": {
 				"enable": true,
 				"update-active-window": true,
