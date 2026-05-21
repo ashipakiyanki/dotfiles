@@ -13,12 +13,12 @@ EOF
 
 commands=$(cat << 'EOF'
 hyprshade toggle crt
-hyprctl keyword monitor HDMI-A-1,640x480@60,4480x960,1.0
-hyprctl keyword monitor HDMI-A-1,640x480@120,4480x960,1.0
-hyprctl keyword monitor HDMI-A-1,1024x768@85,4480x672,1.0
-hyprctl keyword monitor HDMI-A-1,1200x900@72,4480x540,1.0
-hyprctl keyword monitor HDMI-A-1,1280x240@120,4480x1200,1.0
-hyprctl keyword monitor HDMI-A-1,1440x1080@60,4480x360,1.0
+hyprctl eval 'hl.monitor({output = "HDMI-A-1", mode = "640x480@60", position = "4480x960", scale = 1.0})'
+hyprctl eval 'hl.monitor({output = "HDMI-A-1", mode = "640x480@120", position = "4480x960", scale = 1.0})'
+hyprctl eval 'hl.monitor({output = "HDMI-A-1", mode = "1024x768@85", position = "4480x672", scale = 1.0})'
+hyprctl eval 'hl.monitor({output = "HDMI-A-1", mode = "1200x900@72", position = "4480x540", scale = 1.0})'
+hyprctl eval 'hl.monitor({output = "HDMI-A-1", mode = "1280x240@120", position = "4480x1200",scale = 1.0})'
+hyprctl eval 'hl.monitor({output = "HDMI-A-1", mode = "1440x1080@60", position = "4480x360", scale = 1.0})'
 EOF
 )
 
