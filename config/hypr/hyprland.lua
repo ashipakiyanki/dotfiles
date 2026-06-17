@@ -32,6 +32,9 @@ hl.on("hyprland.start", function ()
     hl.exec_cmd("blueman-applet")
     hl.exec_cmd("nm-applet")
     hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
+--  {{#unless LAPTOP}}
+    hl.exec_cmd("gpu-screen-recorder -w {{MONITORS.2.name}} -r 60 -f 30 -a 'default_output|default_input' -c mp4 -o ~/Videos/Replays -bm cbr -q 12000")
+--  {{/unless}}
 end)
 
 hl.env("XCURSOR_SIZE", "24")
@@ -81,7 +84,6 @@ hl.config({
             vibrancy  = 0.1696,
         },
     },
-
     animations = {
         enabled = true,
     },
@@ -173,6 +175,7 @@ hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("hyprlock"))
 hl.bind(mainMod .. " + P", hl.dsp.exec_cmd("hyprpicker"))
 hl.bind(mainMod .. " + S", hl.dsp.exec_cmd("hyprshot -m output --clipboard-only"), { locked = true })
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("hyprshot -m region --clipboard-only --freeze"), { locked = true })
+hl.bind(mainMod .. " + ALT + S", hl.dsp.exec_cmd("pkill -SIGUSR1 -f '^gpu-screen-recorder' & notify-send 'Saved replay!'"), { locked = true})
 
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))
