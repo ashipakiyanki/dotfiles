@@ -37,6 +37,7 @@ hl.on("hyprland.start", function ()
 --  {{/unless}}
 end)
 
+hl.env("HYPRSHOT_DIR", "Pictures/Screenshots")
 hl.env("XCURSOR_SIZE", "24")
 hl.env("XCURSOR_THEME", "Bibata-Modern-Ice")
 hl.env("EDITOR", "nvim")
