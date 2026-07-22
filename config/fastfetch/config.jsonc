@@ -70,6 +70,13 @@
 			"key": "Boot Time",
 			"format": "{boot-time}"
 		},
+        {{#if LAPTOP}}
+        {
+            "type": "battery",
+            "key": "Battery",
+            "format": "{capacity} [{status}]"
+        },
+        {{/if}}
 		{
 			"type": "localip",
 			"key": "IP Address"
