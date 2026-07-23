@@ -11,6 +11,7 @@ max-icon-size=96
 default-timeout=1500
 ignore-timeout=1
 font=sans 16
+output={{MONITORS.0.name}}
 
 [urgency=low]
 border-color=#808080
