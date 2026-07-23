@@ -1,0 +1,9 @@
+# yazi.toml
+[opener]
+run_win = [
+    { run = "wine %s", orphan = true, for = "linux" }
+]
+[open]
+prepend_rules = [
+    { url = "*.exe", use = "run_win" }
+]
