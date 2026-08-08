@@ -26,7 +26,9 @@ hl.on("hyprland.start", function ()
     hl.exec_cmd("hyprlock")
     hl.exec_cmd("systemctl --user start hyprpolkitagent")
     hl.exec_cmd("hyprpaper")
+    -- {{#unless LAPTOP}}
     hl.exec_cmd("hypridle")
+    -- {{/unless}}
     hl.exec_cmd("wl-paste --watch cliphist store")
     hl.exec_cmd("hyprpm reload")
     hl.exec_cmd("blueman-applet")
