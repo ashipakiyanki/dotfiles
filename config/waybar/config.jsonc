@@ -69,7 +69,6 @@
             "max-length": 25
         },
 		"clock": {
-			"timezone": "America/Indiana/Indianapolis",
 			"format": "{:%B %d, %Y - %I:%M:%S %p}",
 			"interval": 1
 		}
