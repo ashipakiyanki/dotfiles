@@ -19,5 +19,6 @@ vim.filetype.add({
         h = "c",
         cpp = "cpp",
         hpp = "cpp",
+        java = "java",
     }
 })
