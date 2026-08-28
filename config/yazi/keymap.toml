@@ -7,4 +7,8 @@
     { on = ["d", "u"], run = "plugin restore", desc = "Restore last deleted files/folders" },
     { on = ["d", "U"], run = "plugin restore -- --interactive --interactive-overwrite", desc = "Restore deleted files/folders (Interactive overwrite)" },
     { on = ["F"], run = "plugin yafg", desc = "Fuzzy find" },
+    { on = "<Up>", run = "noop" },
+    { on = "<Down>", run = "noop" },
+    { on = "<Left>", run = "noop" },
+    { on = "<Right>", run = "noop" }
    ]
