@@ -32,6 +32,7 @@
 		},
         "mpris": {
             "format": "{player} ({status}) - {title} [{position}/{length}]",
+            "ignored-players": ["firefox"],
             "interval": 1
         },
 		"tray": {
