@@ -14,6 +14,9 @@ vim.opt.undodir = os.getenv("HOME") .. "/.local/share/nvim/undo"
 vim.opt.undofile = true
 vim.opt.scrolloff = 8
 
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+
 vim.filetype.add({
     extension = {
         h = "c",
