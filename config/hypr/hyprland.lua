@@ -271,8 +271,13 @@ hl.window_rule({
 	match = { class = "blueman-manager" },
 
 	float = true,
-	size = "{800, 600}",
-	center = true
+})
+
+hl.window_rule({
+	name = "network_connections",
+	match = { class = "nm-connection-editor" },
+
+	float = true,
 })
 
 hl.window_rule({
