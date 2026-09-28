@@ -8,7 +8,7 @@ return
             -- Directory to install parsers and queries to (prepended to `runtimepath` to have priority)
             install_dir = vim.fn.stdpath('data') .. '/site'
         }
-        require'nvim-treesitter'.install { 'c', 'cpp', 'lua', 'json', 'java'}
+        require'nvim-treesitter'.install { 'c', 'cpp', 'lua', 'json', 'java', 'rust' }
 
         vim.filetype.add({
             pattern = { [".*/hypr/.*%.conf"] = "hyprlang" },
