@@ -22,6 +22,7 @@ hl.exec_cmd("~/bin/desktop_visualizer")
 -- {{/if}}
 
 hl.on("hyprland.start", function ()
+    hl.exec_cmd("pactl load-module module-loopback")
     hl.exec_cmd("hyprctl dispatch workspace 1")
     hl.exec_cmd("hyprlock")
     hl.exec_cmd("systemctl --user start hyprpolkitagent")
