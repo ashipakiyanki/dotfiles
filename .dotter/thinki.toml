@@ -19,10 +19,6 @@ WORKSPACES = [
 {name = "eDP-1", default = false, str=""},
 {name = "eDP-1", default = false, str=""},
 {name = "eDP-1", default = false, str=""},
-{name = "eDP-1", default = false, str=""},
-{name = "eDP-1", default = false, str=""},
-{name = "eDP-1", default = false, str=""},
-{name = "eDP-1", default = false, str=""},
 ]
 
-WORKSPACES_PER_MONITOR = 8
+WORKSPACES_PER_MONITOR = 4
