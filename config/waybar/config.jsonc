@@ -53,7 +53,7 @@
         "backlight": {
             "device": "intelbacklight",
             "format": "{icon} {percent}%",
-            "format-icons": ["", ""]
+            "format-icons": ["", "", "", "", "", "", "", "", ""]
         },
         "battery": {
             "bat": "BAT0",
