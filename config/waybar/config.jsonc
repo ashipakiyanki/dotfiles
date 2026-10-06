@@ -45,7 +45,7 @@
 		},
 		"wireplumber": {
 			"format": "{icon} {volume}%",
-            "format-icons": ["", "", ""],
+            "format-icons": ["🔈", "🔉", "🔊"],
 			"on-click": "pavucontrol -t 1",
 			"max-volume": 150,
 			"scroll-step": 1
