@@ -4,6 +4,17 @@ return {
    dependencies = { "MunifTanjim/nui.nvim" },
    opts = {
        disable_mouse = false,
-       timeout = false
+       restricted_keys = {
+           ["h"] = {  },
+           ["j"] = {  },
+           ["k"] = {  },
+           ["l"] = {  },
+           ["+"] = {  },
+           ["gj"] = {  },
+           ["gk"] = {  },
+           ["<C-M>"] = {  },
+           ["<C-N>"] = {  },
+           ["<C-P>"] = {  },
+       },
    }
 }
