@@ -4,6 +4,6 @@ awww img -o DP-1 ~/Pictures/Wallpapers/Pinkerton.jpg --transition-type none
 awww img -o DP-2 ~/Pictures/Wallpapers/TDSOTM.png --transition-type none
 awww img -o HDMI-A-1 ~/Pictures/Wallpapers/Sonic.png --transition-type none
 
-sleep 0.1; kitten panel --edge=background --output-name DP-1 -o background_opacity=0.7 cava
-sleep 0.1; kitten panel --edge=background --output-name DP-2 -o background_opacity=0.7 cava
-sleep 0.1; kitten panel --edge=background --output-name HDMI-A-1 -o background_opacity=0.7 cava
+kitten panel --edge=background --output-name DP-1 -o background_opacity=0.7 cava
+kitten panel --edge=background --output-name DP-2 -o background_opacity=0.7 cava
+kitten panel --edge=background --output-name HDMI-A-1 -o background_opacity=0.7 cava
