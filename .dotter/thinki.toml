@@ -15,10 +15,11 @@ MONITORS = [
 MONITOR_COUNT = 1
 
 WORKSPACES = [
-{name = "eDP-1", default = true, str=""},
-{name = "eDP-1", default = false, str=""},
-{name = "eDP-1", default = false, str=""},
-{name = "eDP-1", default = false, str=""},
+    {name = "eDP-1", default = true, str=""},
+    {name = "eDP-1", default = false, str=""},
+    {name = "eDP-1", default = false, str=""},
+    {name = "eDP-1", default = false, str=""},
+    {name = "eDP-1", default = false, str=""}
 ]
 
-WORKSPACES_PER_MONITOR = 4
+WORKSPACES_PER_MONITOR = 5
