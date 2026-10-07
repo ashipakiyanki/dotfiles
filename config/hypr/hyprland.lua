@@ -11,17 +11,15 @@ local terminal = "kitty"
 local fileManager = terminal .. " yazi"
 local menu = "fuzzel"
 
-hl.exec_cmd("killall waybar; sleep 0.1; waybar")
-
 hl.on("hyprland.start", function ()
     hl.exec_cmd("awww-daemon")
     hl.exec_cmd("killall mprisence; sleep 0.1; mprisence")
     hl.exec_cmd("killall cava")
     hl.exec_cmd("sunsetr restart")
     -- {{#if LAPTOP}}
-    hl.exec_cmd("laptop_background")
+    hl.exec_cmd("~/bin/laptop_background")
     -- {{else}}
-    hl.exec_cmd("desktop_background")
+    hl.exec_cmd("~/bin/desktop_background")
     -- {{/if}}
     hl.exec_cmd("pactl load-module module-loopback")
     hl.exec_cmd("hyprctl dispatch workspace 1")
@@ -38,6 +36,7 @@ hl.on("hyprland.start", function ()
 --  {{#unless LAPTOP}}
     hl.exec_cmd("gpu-screen-recorder -w {{MONITORS.2.name}} -r 60 -f 30 -a 'default_output|default_input' -c mp4 -o ~/Videos/Replays -bm cbr -q 12000")
 --  {{/unless}}
+    hl.exec_cmd("waybar")
 end)
 
 hl.env("HYPRSHOT_DIR", "Pictures/Screenshots")
