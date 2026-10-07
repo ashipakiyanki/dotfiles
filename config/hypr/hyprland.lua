@@ -11,22 +11,22 @@ local terminal = "kitty"
 local fileManager = terminal .. " yazi"
 local menu = "fuzzel"
 
-hl.exec_cmd("killall mprisence; sleep 0.1; mprisence")
 hl.exec_cmd("killall waybar; sleep 0.1; waybar")
-hl.exec_cmd("killall cava")
-hl.exec_cmd("sunsetr restart")
--- {{#if LAPTOP}}
-hl.exec_cmd("~/bin/laptop_visualizer")
--- {{else}}
-hl.exec_cmd("~/bin/desktop_visualizer")
--- {{/if}}
 
 hl.on("hyprland.start", function ()
+    hl.exec_cmd("awww-daemon")
+    hl.exec_cmd("killall mprisence; sleep 0.1; mprisence")
+    hl.exec_cmd("killall cava")
+    hl.exec_cmd("sunsetr restart")
+    -- {{#if LAPTOP}}
+    hl.exec_cmd("laptop_background")
+    -- {{else}}
+    hl.exec_cmd("desktop_background")
+    -- {{/if}}
     hl.exec_cmd("pactl load-module module-loopback")
     hl.exec_cmd("hyprctl dispatch workspace 1")
     hl.exec_cmd("hyprlock")
     hl.exec_cmd("systemctl --user start hyprpolkitagent")
-    hl.exec_cmd("hyprpaper")
     -- {{#unless LAPTOP}}
     hl.exec_cmd("hypridle")
     -- {{/unless}}
