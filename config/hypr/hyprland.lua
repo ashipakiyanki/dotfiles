@@ -21,7 +21,7 @@ hl.on("hyprland.start", function ()
     -- {{else}}
     hl.exec_cmd("~/bin/desktop_background")
     -- {{/if}}
-    hl.exec_cmd("pactl load-module module-loopback")
+    hl.exec_cmd("pactl load-module module-loopback source=$(pactl list sources | awk -v RS='' '/Line In/ {for(i=1;i<=NF;i++) if($i==\"Name:\") print $(i+1)}')")
     hl.exec_cmd("hyprctl dispatch workspace 1")
     hl.exec_cmd("hyprlock")
     hl.exec_cmd("systemctl --user start hyprpolkitagent")
@@ -40,8 +40,8 @@ hl.on("hyprland.start", function ()
 end)
 
 hl.env("HYPRSHOT_DIR", "Pictures/Screenshots")
-hl.env("XCURSOR_SIZE", "24")
-hl.env("XCURSOR_THEME", "Bibata-Modern-Ice")
+hl.env("HYPRCURSOR_THEME", "Bibata-Modern-Ice")
+hl.env("HYPRCURSOR_SIZE", "24")
 hl.env("EDITOR", "nvim")
 hl.env("BROWSER", "firefox")
 
@@ -166,6 +166,51 @@ hl.gesture({
 hl.device({
     name = "epic-mouse-v1",
     sensitivity = -0.5,
+})
+
+hl.config({ 
+    plugin = {
+        dynamic_cursors = {
+            enabled = true,
+            mode = "rotate",
+            threshold = 2,
+            rotate = {
+                length = 48,
+                offset = 22.5,
+            },
+
+            tilt = {
+                limit = 5000,
+                activation = "negative_quadratic",
+                window = 100,
+                full = 60,
+            },
+
+            stretch = {
+                limit = 1500,
+                activation = "quadratic",
+                window = 100,
+            },
+
+            shake = {
+                enabled = true,
+                threshold = 5.0,
+                speed = 4.0,
+                influence = 1.0,
+                limit = 4.0,
+                timeout = 500,
+                effects = true,
+                ipc = false,
+            },
+
+            hyprcursor = {
+                nearest = 2,
+                enabled = true,
+                resolution = -1,
+                fallback = "clientside",
+            },
+        }
+    }
 })
 
 local mainMod = "SUPER"
