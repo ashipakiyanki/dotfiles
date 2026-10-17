@@ -172,11 +172,11 @@ hl.config({
     plugin = {
         dynamic_cursors = {
             enabled = true,
-            mode = "rotate",
+            mode = "stretch",
             threshold = 2,
             rotate = {
                 length = 48,
-                offset = 22.5,
+                offset = 0,
             },
 
             tilt = {
