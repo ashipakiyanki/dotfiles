@@ -21,7 +21,7 @@ hl.on("hyprland.start", function ()
     -- {{else}}
     hl.exec_cmd("~/bin/desktop_background")
     -- {{/if}}
-    hl.exec_cmd("pactl load-module module-loopback source=$(pactl list sources | awk -v RS='' '/Line In/ {for(i=1;i<=NF;i++) if($i==\"Name:\") print $(i+1)}')")
+    hl.exec_cmd("~/bin/listen_to_line_in")
     hl.exec_cmd("hyprctl dispatch workspace 1")
     hl.exec_cmd("hyprlock")
     hl.exec_cmd("systemctl --user start hyprpolkitagent")

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+source_name=""
+count=0
+while [ -z "$source_name" ]; do
+    source_name=$(pactl list sources | awk -v RS='' '/Line In/ {for(i=1;i<=NF;i++) if($i=="Name:") print $(i+1)}')
+    if (( count >= 10 )); then
+        break
+    fi
+    sleep 0.5
+    ((count++))
+done
+
+pactl load-module module-loopback source=$source_name
