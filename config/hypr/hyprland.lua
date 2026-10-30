@@ -332,3 +332,8 @@ hl.window_rule({
     monitor = "HDMI-A-1",
     fullscreen = true
 })
+
+hl.layer_rule({
+    match = { namespace = "launcher" },
+    dim_around = true,
+})
