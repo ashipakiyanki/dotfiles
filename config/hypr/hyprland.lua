@@ -37,6 +37,7 @@ hl.on("hyprland.start", function ()
     hl.exec_cmd("gpu-screen-recorder -w {{MONITORS.2.name}} -r 60 -f 30 -a 'default_output|default_input' -c mp4 -o ~/Videos/Replays -bm cbr -q 12000")
 --  {{/unless}}
     hl.exec_cmd("waybar")
+    hl.exec_cmd("trash-empty -f 14")
 end)
 
 hl.env("HYPRSHOT_DIR", "Pictures/Screenshots")
